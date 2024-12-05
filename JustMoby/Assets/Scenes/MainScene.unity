@@ -368,6 +368,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2893368107703031915, guid: 91f419f155aa6db42b09fe2e25e67e2a, type: 3}
   m_PrefabInstance: {fileID: 117161838}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &117161840 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7744201390032483185, guid: 91f419f155aa6db42b09fe2e25e67e2a, type: 3}
+  m_PrefabInstance: {fileID: 117161838}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &259915235
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -615,6 +626,8 @@ GameObject:
   - component: {fileID: 611391041}
   - component: {fileID: 611391043}
   - component: {fileID: 611391042}
+  - component: {fileID: 611391045}
+  - component: {fileID: 611391044}
   m_Layer: 5
   m_Name: Window
   m_TagString: Untagged
@@ -686,6 +699,43 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 611391040}
   m_CullTransparentMesh: 1
+--- !u!95 &611391044
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611391040}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &611391045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611391040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eba3fff2169e6b649bf523fdd295c27c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 611391044}
+  _titleText: {fileID: 320711514}
+  _descriptionText: {fileID: 1222154706}
+  _mainImage: {fileID: 1344095609}
+  _buttonWithPrice: {fileID: 117161840}
+  _buttonWithDiscount: {fileID: 695789001}
 --- !u!1 &674897868
 GameObject:
   m_ObjectHideFlags: 0
@@ -715,6 +765,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55869b4e5b1be754081e1954f4fd19da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _model: {fileID: 1034018443}
+  _view: {fileID: 611391045}
   _showWindowButton: {fileID: 4045445051008782212}
 --- !u!4 &674897870
 Transform:
@@ -912,6 +964,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8850633559314197610, guid: 4a2c968f1c0b8e243ac878861c30fa4d, type: 3}
   m_PrefabInstance: {fileID: 695788999}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &695789001 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4146799861007599472, guid: 4a2c968f1c0b8e243ac878861c30fa4d, type: 3}
+  m_PrefabInstance: {fileID: 695788999}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &729641458
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1117,8 +1180,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 145fa88b83d9ba948894477db30a3fa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scenarioConfig: {fileID: 0}
-  _iconsViewConfig: {fileID: 0}
+  _scenarioConfig: {fileID: 11400000, guid: ae878a852c7f4284f9ddfa542e14bc5f, type: 2}
+  _iconsViewConfig: {fileID: 11400000, guid: 2bc2e35ed6b897b4cb69d6a7d1f5dd46, type: 2}
 --- !u!4 &1034018444
 Transform:
   m_ObjectHideFlags: 0
@@ -1145,7 +1208,7 @@ GameObject:
   - component: {fileID: 1222154707}
   - component: {fileID: 1222154706}
   m_Layer: 5
-  m_Name: Description
+  m_Name: DescriptionText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1382,7 +1445,7 @@ GameObject:
   - component: {fileID: 1344095610}
   - component: {fileID: 1344095609}
   m_Layer: 5
-  m_Name: MainIcon
+  m_Name: MainImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
