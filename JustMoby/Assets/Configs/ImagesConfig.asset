@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9238e2677391ed543b6143c66317db58, type: 3}
+  m_Name: ImagesConfig
+  m_EditorClassIdentifier: 
+  _images:
+  - _image: {fileID: 21300000, guid: 54ab356fe359c064a98902594b86a790, type: 3}
+    _name: axe
+  - _image: {fileID: 21300000, guid: 44305c808079be045a1aa8c51636e0d0, type: 3}
+    _name: hammer
+  - _image: {fileID: 21300000, guid: 3fd97e1ade331914db3a3695a39d2f20, type: 3}
+    _name: helmet
+  - _image: {fileID: 21300000, guid: 466afd9831327fb45816bdb8a523f94e, type: 3}
+    _name: log
+  - _image: {fileID: 21300000, guid: c7c04554fe3ce714fb8ebe77e6276db6, type: 3}
+    _name: pliers
+  - _image: {fileID: 21300000, guid: b99aa7546ec4d9e48b23982f4bb26163, type: 3}
+    _name: saw
+  - _image: {fileID: 21300000, guid: 094225483ac443444a0862958d123f90, type: 3}
+    _name: wood

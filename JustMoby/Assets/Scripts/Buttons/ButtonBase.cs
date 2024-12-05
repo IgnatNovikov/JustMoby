@@ -1,8 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public abstract class ButtonBase : MonoBehaviour
+public class ButtonBase : MonoBehaviour
 {
-    public abstract void Initialize(float price);
+    [SerializeField] private Button _button;
+    public Button Button => _button;
+
+    public virtual void Initialize(ButtonData data)
+    {
+
+    }
+}
+
+public class ButtonData
+{
+    public string Price;
+    public string OldPrice;
+    public string Discount;
 }
