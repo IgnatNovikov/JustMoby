@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "WindowScenarioConfig", menuName = "ScriptableObjects/WindowScenarioConfig", order = 0)]
@@ -5,6 +6,8 @@ public class WindowScenarioConfig : ScriptableObject
 {
     [SerializeField] private IconsViewConfig _iconsViewConfig;
     public IconsViewConfig IconsViewConfig => _iconsViewConfig;
+    [SerializeField] private List<IconsViewConfig> _allConfigs;
+    public List<IconsViewConfig> AllConfigs => _allConfigs;
 
     [Space]
 
