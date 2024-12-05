@@ -33,8 +33,16 @@ public class WindowController : MonoBehaviour
             return;
 
         float price = _model.ScenarioConfig.Price - _model.ScenarioConfig.Price * _model.ScenarioConfig.Discount / 100;
+        if (price < 0)
+            price = 0;
 
-        _view.Initialize(_model.ScenarioConfig.Title, _model.ScenarioConfig.Description, mainImage, string.Format(_priceFormat, price), string.Format(_oldPriceFormat, _model.ScenarioConfig.Price), string.Format(_discountFormat, _model.ScenarioConfig.Discount));
+        _view.Initialize(_model.ScenarioConfig.Title,
+            _model.ScenarioConfig.Description,
+            mainImage,
+            string.Format(_priceFormat, price),
+            string.Format(_oldPriceFormat, _model.ScenarioConfig.Price),
+            _model.ScenarioConfig.Discount > 0,
+            string.Format(_discountFormat, _model.ScenarioConfig.Discount > 100 ? 100 : _model.ScenarioConfig.Discount));
     }
 
     private void InitializePanel()
@@ -45,12 +53,10 @@ public class WindowController : MonoBehaviour
     private void ShowWindow()
     {
         _view.ShowWindow();
-        //_view.gameObject.SetActive(true);
     }
 
     private void CloseWindow()
     {
         _view.CloseWindow();
-        //_view.gameObject.SetActive(false);
     }
 }

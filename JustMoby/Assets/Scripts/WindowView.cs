@@ -14,7 +14,7 @@ public class WindowView : MonoBehaviour
 
     public UnityAction OnButtonWithPriceClick;
 
-    public void Initialize(string title, string description, Sprite mainImageSprite, string price, string oldPrice, string discount)
+    public void Initialize(string title, string description, Sprite mainImageSprite, string price, string oldPrice, bool hasDiscount, string discount)
     {
         _buttonWithPrice.Button.onClick.RemoveAllListeners();
         _buttonWithPrice.Button.onClick.AddListener(OnButtonWithPriceClick);
@@ -25,8 +25,6 @@ public class WindowView : MonoBehaviour
         _titleText.text = title;
         _descriptionText.text = description;
         _mainImage.sprite = mainImageSprite;
-
-        bool hasDiscount = !string.IsNullOrEmpty(discount);
 
         _buttonWithPrice.gameObject.SetActive(!hasDiscount);
         _buttonWithDiscount.gameObject.SetActive(hasDiscount);
